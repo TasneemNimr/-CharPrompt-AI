@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة الشخصيات | Character Tool</title>
+    <link rel="stylesheet" href="../مجلد جديد/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" data-ar="أداة الشخصيات 🎨" data-en="CharTool 🎨">أداة الشخصيات 🎨</div>
+        
+        <ul class="nav-links">
+            <li><a href="../مجلد جديد/index.html" class="active" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            
+            <li><a href="../مجلد جديد/tutorial.html" target="_blank" data-ar="دليل الاستخدام" data-en="Tutorial">دليل الاستخدام</a></li>
+            
+            <li><a href="../مجلد جديد/about.html" target="_blank" data-ar="عن المشروع" data-en="About">عن المشروع</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button id="langToggle" class="control-btn">EN</button>
+            <button id="themeToggle" class="control-btn">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container fade-in-up">
+        <header>
+            <h1 data-ar="مولّد أوامر السلاسل ثلاثية الأبعاد" data-en="3D Series Prompt Generator">مولّد أوامر السلاسل ثلاثية الأبعاد</h1>
+            <p data-ar="حافظ على ملامح شخصيتك وتصميمها ثابتاً في كل لقطة." data-en="Keep your character's features consistent in every shot.">حافظ على ملامح شخصيتك وتصميمها ثابتاً في كل لقطة.</p>
+        </header>
+
+        <main>
+            <section class="inputs-section">
+                <div class="input-group">
+                    <label for="charName" data-ar="اسم الشخصية:" data-en="Character Name:">اسم الشخصية:</label>
+                    <input type="text" id="charName" placeholder="مثال: Karaza">
+                </div>
+
+                <div class="input-group">
+                    <label for="artStyle" data-ar="أسلوب الرسم:" data-en="Art Style:">أسلوب الرسم:</label>
+                    <select id="artStyle">
+                        <option value="3D animation style, highly detailed, Pixar style" data-ar="أنيميشن 3D (أسلوب بيكسار)" data-en="3D Animation (Pixar Style)">أنيميشن 3D (أسلوب بيكسار)</option>
+                        <option value="2D Anime style, studio ghibli" data-ar="أنمي 2D" data-en="2D Anime">أنمي 2D</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="appearance" data-ar="المظهر الثابت (الوجه، الشعر، الملابس):" data-en="Consistent Appearance (Face, Hair, Clothes):">المظهر الثابت (الوجه، الشعر، الملابس):</label>
+                    <textarea id="appearance" placeholder="..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="action" data-ar="الحدث والمشهد (ماذا تفعل الآن؟):" data-en="Action & Scene (What are they doing?):">الحدث والمشهد (ماذا تفعل الآن؟):</label>
+                    <textarea id="action" placeholder="..."></textarea>
+                </div>
+
+                <button id="generateBtn" class="primary-btn" data-ar="توليد الأمر" data-en="Generate Prompt">توليد الأمر</button>
+            </section>
+
+            <section class="result-section">
+                <h2 data-ar="النتيجة:" data-en="Result:">النتيجة:</h2>
+                <textarea id="finalPrompt" readonly></textarea>
+                <button id="copyBtn" class="secondary-btn" data-ar="نسخ النص" data-en="Copy Text">نسخ النص</button>
+            </section>
+        </main>
+    </div>
+    
+    <script src="../مجلد جديد/script.js"></script>
+</body>
+</html>
